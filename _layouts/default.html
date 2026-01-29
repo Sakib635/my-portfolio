@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sadman Jashim Sakib</title>
-  <meta name="description" content="Research Portfolio of Sadman Jashim Sakib | Software Engineering Researcher | PhD Aspirant">
-  <link rel="stylesheet" href="/my-portfolio/assets/css/style.css">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 <body>
 
@@ -13,41 +13,24 @@
   <header>
     <nav>
       <ul>
-          <li><a href="{{ site.baseurl }}/">Home</a></li>
-          <li><a href="{{ site.baseurl }}/about/">About</a></li>
-          <li><a href="{{ site.baseurl }}/projects/">Projects</a></li>
-          <li><a href="{{ site.baseurl }}/publications/">Publications</a></li>
-          <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
+        {% for item in site.nav_items %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
   </header>
 
   <!-- Main Content -->
   <main>
-    <section id="profile">
-      
-      <h1>Sadman Jashim Sakib</h1>
-      <p>
-        I am a Research Associate in Software Engineering at the University of Windsor. 
-        My research focuses on <strong>software dependency management, program analysis, 
-        and the use of Large Language Models for automated debugging, repair, and reproducibility of Python software systems</strong>.
-      </p>
-      <p>
-        I am passionate about designing tools and methodologies that enhance software reliability and reproducibility. 
-        My work has led to publications at <strong>IEEE/ACM MSR 2025</strong>, 
-        <strong>AIP Conference Proceedings 2024</strong>, and my <strong>Master’s thesis</strong>.
-      </p>
-      <p>I am seeking to pursue a <strong>PhD in Software Engineering</strong>, focusing on software analysis, tooling, and AI-assisted software development.</p>
-      <img src="/my-portfolio/assets/images/profile.jpg" alt="Sadman Jashim Sakib">
-    </section>
+    {{ content }}
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>Email: <a href="mailto:sadmanjashimsakib@gmail.com">sadmanjashimsakib@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Sakib635">Sakib635</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sadman-jashim-sakib-461623202/">Sadman Jashim Sakib</a></p>
-    <p>Download CV: <a href="/my-portfolio/assets/pdf/Sadman_Resume.pdf">PDF</a></p>
+    <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <p>GitHub: <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">{{ site.title }}</a></p>
+    <p>Download CV: <a href="{{ site.baseurl }}/assets/pdf/Sadman_Resume.pdf">PDF</a></p>
   </footer>
 
 </body>
