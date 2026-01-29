@@ -5,7 +5,7 @@ description: "Research Portfolio of Sadman Jashim Sakib | Software Engineering R
 url: "https://sakib635.github.io"
 baseurl: "/my-portfolio"
 
-theme: jekyll-theme-primer
+# theme: jekyll-theme-primer
 
 github_username: "Sakib635"
 linkedin_username: "sadman-jashim-sakib-461623202"
