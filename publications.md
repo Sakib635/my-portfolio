@@ -1,8 +1,9 @@
 ---
 title: "Publications"
-permalink: /publications/
 layout: default
+permalink: /publications/
 ---
+
 
 ## Publications
 

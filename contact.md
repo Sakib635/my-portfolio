@@ -1,8 +1,9 @@
 ---
 title: "Contact"
-permalink: /contact/
 layout: default
+permalink: /contact/
 ---
+
 
 **Email:** [sadmanjashimsakib@gmail.com](mailto:sadmanjashimsakib@gmail.com)  
 **GitHub:** [Sakib635](https://github.com/Sakib635)  

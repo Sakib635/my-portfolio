@@ -1,51 +1,23 @@
-# ==========================
-# Site Settings
-# ==========================
 title: "Sadman Jashim Sakib"
 email: "sadmanjashimsakib@gmail.com"
 description: "Research Portfolio of Sadman Jashim Sakib | Software Engineering Researcher | PhD Aspirant"
 
-# GitHub Pages URL Settings
-baseurl: "/my-portfolio"   # your repo name
-url: "https://sakib635.github.io"   # main domain
+url: "https://sakib635.github.io"
+baseurl: "/my-portfolio"
 
-# ==========================
-# Theme
-# ==========================
 theme: jekyll-theme-primer
 
-# ==========================
-# Social Links
-# ==========================
 github_username: "Sakib635"
 linkedin_username: "sadman-jashim-sakib-461623202"
-twitter_username: ""          # optional
-google_scholar_username: ""   # optional
 
-# ==========================
-# Profile Picture
-# ==========================
-profile_picture: "{{ site.baseurl }}/assets/images/profile.jpg"
-
-# ==========================
-# Navigation
-# ==========================
 nav_items:
   - title: "Home"
-    url: "{{ site.baseurl }}/"
+    url: "/"
   - title: "About"
-    url: "{{ site.baseurl }}/about/"
+    url: "/about/"
   - title: "Projects"
-    url: "{{ site.baseurl }}/projects/"
+    url: "/projects/"
   - title: "Publications"
-    url: "{{ site.baseurl }}/publications/"
+    url: "/publications/"
   - title: "Contact"
-    url: "{{ site.baseurl }}/contact/"
-
-# ==========================
-# Optional Settings
-# ==========================
-# You can add more settings if needed, like:
-# - social links icons
-# - analytics
-# - collections
+    url: "/contact/"

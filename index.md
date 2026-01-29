@@ -1,8 +1,9 @@
 ---
 title: "Home"
-permalink: /
 layout: default
+permalink: /
 ---
+
 
 ![Profile]({{ site.baseurl }}/assets/images/profile.jpg)
 

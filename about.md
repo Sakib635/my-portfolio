@@ -1,8 +1,9 @@
 ---
 title: "About"
-permalink: /about/
 layout: default
+permalink: /about/
 ---
+
 
 ## Research Interests
 

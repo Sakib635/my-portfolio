@@ -14,26 +14,22 @@
     <nav>
       <ul>
         {% for item in site.nav_items %}
-          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          <li>
+            <a href="{{ site.baseurl }}{{ item.url }}">
+              {{ item.title }}
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </nav>
   </header>
 
+
   <!-- Main Content -->
   <main>
     {{ content }}
   </main>
-      <nav>
-  <ul>
-    <li><a href="{{ site.baseurl }}/">Home</a></li>
-    <li><a href="{{ site.baseurl }}/about/">About</a></li>
-    <li><a href="{{ site.baseurl }}/projects/">Projects</a></li>
-    <li><a href="{{ site.baseurl }}/publications/">Publications</a></li>
-    <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
-  </ul>
-</nav>
-
+      
   <!-- Footer -->
   <footer>
     <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
