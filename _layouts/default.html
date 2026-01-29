@@ -3,19 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
+  <!-- Consider adding theme-color for mobile browser chrome -->
+  <meta name="theme-color" content="#ffffff">
+  <title>{{ page.title | default: site.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <!-- Optional: Open Graph / Twitter cards for better social sharing -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/images/og-image.jpg"> <!-- add your own image -->
+
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 <body>
 
-  <!-- Header / Navigation -->
-  <header>
-    <nav>
+  <!-- Header / Navigation – already good, but add role & aria-label for accessibility -->
+  <header role="banner">
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
         {% for item in site.nav_items %}
           <li>
-            <a href="{{ site.baseurl }}{{ item.url }}">
+            <a href="{{ site.baseurl }}{{ item.url }}" {% if item.url == page.url %}aria-current="page"{% endif %}>
               {{ item.title }}
             </a>
           </li>
@@ -24,19 +33,21 @@
     </nav>
   </header>
 
-
-  <!-- Main Content -->
-  <main>
+  <!-- Main content – wrap in <main> (very important semantic landmark) -->
+  <main role="main" id="main-content">
     {{ content }}
   </main>
-      
-  <!-- Footer -->
-  <footer>
+
+  <!-- Footer – add role & make it a landmark -->
+  <footer role="contentinfo">
     <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-    <p>GitHub: <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">{{ site.title }}</a></p>
-    <p>Download CV: <a href="{{ site.baseurl }}/assets/pdf/Sadman_Resume.pdf">PDF</a></p>
+    <p>GitHub: <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">{{ site.github_username }}</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank" rel="noopener noreferrer">{{ site.title }}</a></p>
+    <p>Download CV: <a href="{{ site.baseurl }}/assets/pdf/Sadman_Resume.pdf" target="_blank" rel="noopener noreferrer">PDF</a></p>
   </footer>
+
+  <!-- Optional: Skip link for keyboard users (accessibility win) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
 </body>
 </html>
