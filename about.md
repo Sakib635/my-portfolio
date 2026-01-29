@@ -7,7 +7,7 @@ permalink: /about/
 <div style="text-align: center; margin: 4rem 0 3rem;">
   <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">Sadman Jashim Sakib</h1>
   <p style="font-size: 1.4rem; color: var(--text-light); max-width: 700px; margin: 0 auto 1.5rem;">
-    Research Associate in Software Engineering • M.Sc. Computer Science (U Windsor) • Seeking PhD Opportunities
+    Research Associate in Software Engineering • M.Sc. Computer Science (University of Windsor) 
   </p>
   
   <div style="font-size: 1.6rem; margin-top: 1rem;">

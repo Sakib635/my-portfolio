@@ -198,6 +198,33 @@ h2::after {
   box-shadow: var(--shadow-md);
 }
 
+
+
+
+
+.project-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+
+
+
 /* ───────────────────────────────────────
    Footer
    ─────────────────────────────────────── */
