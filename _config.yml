@@ -1,0 +1,26 @@
+# Site settings
+title: "Sadman Jashim Sakib"
+email: "sadmanjashimsakib@gmail.com"
+description: "Research Portfolio of Sadman Jashim Sakib | Software Engineering Researcher | PhD Aspirant"
+baseurl: "" # leave empty for GitHub Pages
+url: "https://Sakib635.github.io"
+
+# Social links
+github_username: "Sakib635"
+linkedin_username: "sadman-jashim-sakib-461623202"
+twitter_username: ""
+google_scholar_username: "" # optional
+
+# Profile picture
+profile_picture: "assets/images/profile.jpg"
+
+# Navigation
+nav_items:
+  - title: "About"
+    url: "/about/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Publications"
+    url: "/publications/"
+  - title: "Contact"
+    url: "/contact/"
