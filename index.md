@@ -7,7 +7,8 @@ permalink: /
 
 <img src="{{ site.baseurl }}/assets/images/profile.jpg"
      alt="Sadman Jashim Sakib"
-     class="profile-img">
+     class="profile-img"
+     style="max-width:600px; width:100%;">
      
 ## About Me
 
