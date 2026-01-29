@@ -47,12 +47,12 @@ header nav a:hover {
    Project Images
 ========================= */
 .project-img {
-  width: 40px;
-  max-width: 50%;
-  border-radius: 50%;
+  width: 50%;
+  max-width: 90px;
   display: block;
-  margin: 20px auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  margin: 15px auto 30px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
 }
 
 /* =========================
