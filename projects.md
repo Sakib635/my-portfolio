@@ -12,7 +12,10 @@ PyHealer combines **Large Language Models (LLMs)** with **Retrieval-Augmented Ge
 
 **Tools & Techniques:** Python, LLMs, RAG, Agentic AI, Error Analysis, Environment Management, Automation  
 **Link:** [Zenodo](https://zenodo.org/records/18218624)  
-![PyHealer Screenshot](assets/images/pyhealer.png)
+<img src="{{ site.baseurl }}/assets/images/pyhealer.png"
+     alt="PyHealer Screenshot"
+     class="project-img">
+
 
 ---
 
@@ -22,7 +25,9 @@ SMTpip resolves Python package conflicts using **SMT solvers**, translating requ
 
 **Tools & Techniques:** Python, SMT Solvers, PyPI API, Constraint Modeling  
 **Link:** [GitHub](https://github.com/Sakib635/SMTpip)  
-![SMTpip Screenshot](assets/images/smtpip.png)
+<img src="{{ site.baseurl }}/assets/images/smtpip.png"
+     alt="smtpip Screenshot"
+     class="project-img">
 
 ---
 
@@ -43,4 +48,6 @@ NLP and deep learning-based bot to assist undergraduate students in coursework.
 
 **Tools & Techniques:** NLTK, PyTorch, Data Analysis  
 **Link:** [GitHub](https://github.com/Sakib635/Virtual-Teaching-Assistant-VTA-bot-)  
-![VTA Bot Screenshot](assets/images/vta.png)
+<img src="{{ site.baseurl }}/assets/images/vta.png"
+     alt="vta Screenshot"
+     class="project-img">

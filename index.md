@@ -5,8 +5,10 @@ permalink: /
 ---
 
 
-![Profile]({{ site.baseurl }}/assets/images/profile.jpg)
-
+<img src="{{ site.baseurl }}/assets/images/profile.jpg"
+     alt="Sadman Jashim Sakib"
+     class="profile-img">
+     
 ## About Me
 
 I am a Research Associate in Software Engineering at the University of Windsor. My research focuses on **software dependency management, program analysis, and LLMs for automated debugging and repair**.
