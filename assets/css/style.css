@@ -35,8 +35,8 @@ header nav a:hover {
    Profile Image
 ========================= */
 .profile-img {
-  width: 180px;
-  max-width: 100%;
+  width: 90px;
+  max-width: 50%;
   border-radius: 50%;
   display: block;
   margin: 20px auto;
