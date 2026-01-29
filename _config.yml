@@ -1,25 +1,51 @@
-# Site settings
+# ==========================
+# Site Settings
+# ==========================
 title: "Sadman Jashim Sakib"
 email: "sadmanjashimsakib@gmail.com"
 description: "Research Portfolio of Sadman Jashim Sakib | Software Engineering Researcher | PhD Aspirant"
-baseurl: "" # leave empty for GitHub Pages
-url: "https://Sakib635.github.io"
+
+# GitHub Pages URL Settings
+baseurl: "/my-portfolio"   # your repo name
+url: "https://sakib635.github.io"   # main domain
+
+# ==========================
+# Theme
+# ==========================
 theme: jekyll-theme-primer
 
-# Social links
+# ==========================
+# Social Links
+# ==========================
 github_username: "Sakib635"
 linkedin_username: "sadman-jashim-sakib-461623202"
+twitter_username: ""          # optional
+google_scholar_username: ""   # optional
 
-# Profile picture
-profile_picture: "assets/images/profile.jpg"
+# ==========================
+# Profile Picture
+# ==========================
+profile_picture: "{{ site.baseurl }}/assets/images/profile.jpg"
 
+# ==========================
 # Navigation
+# ==========================
 nav_items:
+  - title: "Home"
+    url: "{{ site.baseurl }}/"
   - title: "About"
-    url: "/about/"
+    url: "{{ site.baseurl }}/about/"
   - title: "Projects"
-    url: "/projects/"
+    url: "{{ site.baseurl }}/projects/"
   - title: "Publications"
-    url: "/publications/"
+    url: "{{ site.baseurl }}/publications/"
   - title: "Contact"
-    url: "/contact/"
+    url: "{{ site.baseurl }}/contact/"
+
+# ==========================
+# Optional Settings
+# ==========================
+# You can add more settings if needed, like:
+# - social links icons
+# - analytics
+# - collections
