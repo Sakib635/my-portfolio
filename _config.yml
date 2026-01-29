@@ -4,12 +4,11 @@ email: "sadmanjashimsakib@gmail.com"
 description: "Research Portfolio of Sadman Jashim Sakib | Software Engineering Researcher | PhD Aspirant"
 baseurl: "" # leave empty for GitHub Pages
 url: "https://Sakib635.github.io"
+theme: jekyll-theme-primer
 
 # Social links
 github_username: "Sakib635"
 linkedin_username: "sadman-jashim-sakib-461623202"
-twitter_username: ""
-google_scholar_username: "" # optional
 
 # Profile picture
 profile_picture: "assets/images/profile.jpg"
