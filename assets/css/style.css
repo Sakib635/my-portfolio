@@ -168,7 +168,7 @@ h2::after {
 
 /* Project images – nicer presentation */
 .project-img {
-  width: 100%;
+  width: 70%;
   max-width: 1100px;              /* ← bigger than 920–1080px suggestions */
   margin: 4rem auto;              /* generous vertical spacing */
   border-radius: var(--radius);
