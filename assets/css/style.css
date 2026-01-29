@@ -168,16 +168,19 @@ h2::after {
 
 /* Project images – nicer presentation */
 .project-img {
-  width: min(100% - 3rem, 1200px);   /* grows up to 1200px, then caps */
-  margin: 4rem auto;
+  width: 100%;
+  max-width: 1100px;              /* ← bigger than 920–1080px suggestions */
+  margin: 4rem auto;              /* generous vertical spacing */
   border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
   border: 1px solid var(--gray-200);
-  transition: transform 0.5s ease;
+  transition: all 0.48s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-img:hover {
-  transform: scale(1.025);
+  transform: translateY(-16px) scale(1.035);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.18);
+  border-color: var(--primary);
 }
 /* Cards / Project blocks (optional – add .card class to sections) */
 .card {
