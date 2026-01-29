@@ -4,7 +4,7 @@ permalink: /
 layout: default
 ---
 
-![Profile](assets/images/profile.jpg)
+![Profile]({{ site.baseurl }}/assets/images/profile.jpg)
 
 ## About Me
 
