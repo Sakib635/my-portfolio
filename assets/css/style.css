@@ -295,25 +295,71 @@ h2::after {
 /* ───────────────────────────────────────
    Footer
    ─────────────────────────────────────── */
+/* ───────────────────────────────────────
+   Footer – Professional & Modern
+   ─────────────────────────────────────── */
 footer {
   margin-top: 8rem;
   padding: 4rem 2rem 2.5rem;
   background: var(--bg-soft);
-  text-align: center;
-  color: var(--text-light);
   border-top: 1px solid var(--gray-200);
+  color: var(--text-light);
+  font-size: 0.95rem;
+  text-align: center;
 }
 
-footer a {
-  color: var(--primary);
-  font-weight: 600;
+.footer-container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-links a {
+  color: var(--text-light);
   text-decoration: none;
-  transition: color 0.25s;
+  font-weight: 500;
+  transition: color 0.25s, transform 0.25s;
 }
 
-footer a:hover {
-  color: var(--primary-dark);
-  text-decoration: underline;
+.footer-links a:hover,
+.footer-links a:focus {
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.footer-links .icon {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  transition: opacity 0.25s;
+}
+
+.footer-links a:hover .icon {
+  opacity: 1;
+}
+
+.footer-copyright {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 /* ───────────────────────────────────────
