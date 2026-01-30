@@ -334,7 +334,7 @@ footer {
 }
 
 .footer-links a {
-  color: var(--text-light);
+  color: var(--link-color, var(--primary));
   text-decoration: none;
   font-weight: 500;
   transition: color 0.25s, transform 0.25s;
@@ -342,24 +342,55 @@ footer {
 
 .footer-links a:hover,
 .footer-links a:focus {
-  color: var(--primary);
+  color: var(--link-hover, var(--primary-dark));
   transform: translateY(-1px);
 }
 
 .footer-links .icon {
   font-size: 1.3rem;
   opacity: 0.8;
-  transition: opacity 0.25s;
+  transition: opacity 0.25s, color 0.25s;
 }
 
 .footer-links a:hover .icon {
   opacity: 1;
+  color: var(--link-hover, var(--primary-dark));
 }
 
 .footer-copyright {
   margin-top: 1rem;
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+/* ───────────────────────────────────────
+   Link colors – different in light & dark mode
+   ─────────────────────────────────────── */
+
+:root {
+  --link-color:       #0066ff;        /* light mode – your brand blue */
+  --link-hover:       #004dcc;
+}
+
+.dark {
+  --link-color:       #93c5fd;        /* dark mode – much lighter & softer blue */
+  --link-hover:       #60a5fa;        /* hover – original primary for familiarity */
+}
+
+/* Optional: even softer / more muted variant if #93c5fd feels still too bright */
+.dark {
+  --link-color:       #a5d6ff;        /* alternative – very soft blue */
+  --link-hover:       #7ab8ff;
+}
+
+/* Dark mode footer adjustments (already good, just making sure links are visible) */
+.dark footer a {
+  color: var(--link-color);
+}
+
+.dark .footer-links a:hover,
+.dark .footer-links a:focus {
+  color: var(--link-hover);
 }
 
 /* ───────────────────────────────────────
