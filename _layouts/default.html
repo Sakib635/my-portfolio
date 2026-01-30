@@ -3,23 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Consider adding theme-color for mobile browser chrome -->
   <meta name="theme-color" content="#ffffff">
   <title>{{ page.title | default: site.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
-  <!-- Optional: Open Graph / Twitter cards for better social sharing -->
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ page.description | default: site.description }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:image" content="{{ site.url }}/assets/images/og-image.jpg"> <!-- add your own image -->
+  <meta property="og:image" content="{{ site.url }}/assets/images/og-image.jpg">
 
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-S..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-  <!-- Header / Navigation – already good, but add role & aria-label for accessibility -->
   <header role="banner">
     <nav role="navigation" aria-label="Main navigation">
       <ul>
@@ -31,15 +28,18 @@
           </li>
         {% endfor %}
       </ul>
+
+      <!-- Dark mode toggle button -->
+      <button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+      </button>
     </nav>
   </header>
 
-  <!-- Main content – wrap in <main> (very important semantic landmark) -->
   <main role="main" id="main-content">
     {{ content }}
   </main>
 
-  <!-- Footer – add role & make it a landmark -->
   <footer role="contentinfo">
     <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
     <p>GitHub: <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">{{ site.github_username }}</a></p>
@@ -47,8 +47,36 @@
     <p>Download CV: <a href="{{ site.baseurl }}/assets/pdf/Sadman_Resume.pdf" target="_blank" rel="noopener noreferrer">PDF</a></p>
   </footer>
 
-  <!-- Optional: Skip link for keyboard users (accessibility win) -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Dark mode toggle script -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    // On page load: check saved preference or system preference
+    if (localStorage.theme === 'dark' || 
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+      toggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+      html.classList.remove('dark');
+      toggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+
+    // Toggle on click
+    toggle.addEventListener('click', () => {
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.theme = 'light';
+        toggle.innerHTML = '<i class="fas fa-moon"></i>';
+      } else {
+        html.classList.add('dark');
+        localStorage.theme = 'dark';
+        toggle.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+    });
+  </script>
 
 </body>
 </html>
