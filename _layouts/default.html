@@ -29,7 +29,7 @@
         {% endfor %}
       </ul>
 
-      <!-- Dark mode toggle button -->
+      <!-- Dark mode toggle -->
       <button id="theme-toggle" aria-label="Toggle dark/light mode">
         <i class="fas fa-moon"></i>
       </button>
@@ -49,12 +49,12 @@
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Dark mode toggle script -->
+  <!-- Theme toggle logic -->
   <script>
     const toggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
 
-    // On page load: check saved preference or system preference
+    // Load preference or use system default
     if (localStorage.theme === 'dark' || 
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       html.classList.add('dark');
@@ -64,7 +64,7 @@
       toggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
 
-    // Toggle on click
+    // Handle toggle click
     toggle.addEventListener('click', () => {
       if (html.classList.contains('dark')) {
         html.classList.remove('dark');

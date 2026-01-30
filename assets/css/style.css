@@ -59,10 +59,14 @@ body {
   }
 }
 
-/* Dark mode overrides for specific elements */
+/* Dark mode specific overrides */
 .dark header {
-  background: rgba(15, 23, 42, 0.92);
-  border-bottom: 1px solid rgba(51, 65, 85, 0.7);
+  background: rgba(15, 23, 42, 0.94);
+  border-bottom: 1px solid #334155;
+}
+
+.dark nav a {
+  color: #e2e8f0;
 }
 
 .dark .project-card,
@@ -73,7 +77,7 @@ body {
 
 .dark .project-img {
   border-color: #334155;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.42);
 }
 
 .dark footer {
@@ -84,16 +88,7 @@ body {
 .dark h1 {
   background: linear-gradient(90deg, #e2e8f0, #cbd5e1, #94a3b8);
   -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.dark nav a {
-  color: #e2e8f0;
-}
-
-.dark nav a:hover,
-.dark nav a:focus-visible {
-  color: var(--primary);
+  -webkit-text-fill-color: transparent;
 }
 
 .dark h2::after {
@@ -119,8 +114,8 @@ nav {
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 nav ul {
@@ -131,6 +126,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 1.1rem 0;
+  flex: 1;
 }
 
 nav a {
@@ -158,6 +154,7 @@ nav a::after {
 nav a:hover,
 nav a:focus-visible {
   color: var(--primary);
+  transform: translateY(-1px);
 }
 
 nav a:hover::after,
@@ -166,14 +163,13 @@ nav a:focus-visible::after {
   left: 0;
 }
 
-/* Theme toggle button */
 #theme-toggle {
   background: none;
   border: none;
   color: var(--text);
   font-size: 1.4rem;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.5rem 0.8rem;
   transition: var(--transition);
 }
 
@@ -182,8 +178,9 @@ nav a:focus-visible::after {
   transform: scale(1.15);
 }
 
-/* Rest of your CSS remains mostly the same – profile, main, h1, h2, project-img, project-card, footer, responsive */
-
+/* ───────────────────────────────────────
+   Hero / Profile section
+   ─────────────────────────────────────── */
 .profile-img {
   width: 220px;
   height: 220px;
@@ -191,9 +188,9 @@ nav a:focus-visible::after {
   border-radius: 50%;
   display: block;
   margin: 3.5rem auto 1.8rem;
-  border: 8px solid white;
+  border: 8px solid var(--bg);
   box-shadow: var(--shadow-md), 0 0 0 1px rgba(0,102,255,0.12);
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s;
   animation: gentle-float 8s ease-in-out infinite;
   will-change: transform;
 }
@@ -205,11 +202,57 @@ nav a:focus-visible::after {
 
 .profile-img:hover {
   animation-play-state: paused;
-  transform: scale(1.1) translateY(-10px);
-  box-shadow: 0 28px 60px rgba(0,0,0,0.18), 0 0 0 2px rgba(0,102,255,0.15);
+  transform: scale(1.12) translateY(-12px);
+  box-shadow: 0 32px 70px rgba(0,0,0,0.22), 0 0 0 3px rgba(0,102,255,0.18);
 }
 
-/* ... (keep your existing h1, profile-subtitle, h2, project-img, project-card, footer, responsive media query) ... */
+/* ───────────────────────────────────────
+   Main, Headings, Projects
+   ─────────────────────────────────────── */
+main {
+  max-width: 980px;
+  margin: 5vh auto 10vh;
+  padding: 0 24px;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-align: center;
+  margin: 0.4rem 0 1rem;
+  background: linear-gradient(90deg, #1e293b, #334155, #64748b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-subtitle {
+  text-align: center;
+  font-size: 1.38rem;
+  color: var(--text-light);
+  margin: 0 0 2.2rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 5rem 0 1.6rem;
+  position: relative;
+  padding-bottom: 0.9rem;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), #60a5fa);
+  border-radius: 4px;
+}
 
 .project-img {
   width: 80%;
@@ -223,25 +266,85 @@ nav a:focus-visible::after {
 }
 
 .project-img:hover {
-  transform: translateY(-20px) scale(1.045);
-  box-shadow: 0 48px 120px rgba(0,0,0,0.20);
+  transform: translateY(-24px) scale(1.05);
+  box-shadow: 0 50px 130px rgba(0,0,0,0.24);
   border-color: var(--primary);
 }
 
 .project-card {
-  background: white;
+  background: var(--bg);
   border-radius: var(--radius);
   padding: 2rem;
   margin: 2rem 0;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--gray-200);
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s, border-color 0.4s;
+  transition: transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.42s, border-color 0.3s;
 }
 
 .project-card:hover {
-  transform: translateY(-10px) scale(1.025);
+  transform: translateY(-12px) scale(1.03);
   box-shadow: var(--shadow-md);
   border-color: var(--primary);
 }
 
-/* Footer and responsive remain the same */
+.project-card h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+/* ───────────────────────────────────────
+   Footer
+   ─────────────────────────────────────── */
+footer {
+  margin-top: 8rem;
+  padding: 4rem 2rem 2.5rem;
+  background: var(--bg-soft);
+  text-align: center;
+  color: var(--text-light);
+  border-top: 1px solid var(--gray-200);
+}
+
+footer a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+footer a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* ───────────────────────────────────────
+   Responsive
+   ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    margin: 2.8rem auto 1.6rem;
+  }
+  
+  h1 {
+    font-size: 3.2rem;
+  }
+  
+  h2 {
+    font-size: 1.9rem;
+  }
+  
+  main {
+    padding: 0 16px;
+  }
+
+  .project-img {
+    width: 95%;
+  }
+}
