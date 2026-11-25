@@ -44,7 +44,7 @@ permalink: /projects/
   </p>
   <p><strong>Tools & Techniques:</strong> Python, SMT solvers (Z3), PyPI API, Constraint satisfaction, Version modeling</p>
   <p><strong>Link:</strong> <a href="https://github.com/Sakib635/SMTpip" target="_blank">GitHub: SMTpip</a></p>
-  <img src="{{ site.baseurl }}/assets/images/smtpip.png"
+  <img src="{{ site.baseurl }}/assets/images/architecture.png"
        alt="SMTpip interface or resolution example"
        class="project-img" loading="lazy">
 </div>
