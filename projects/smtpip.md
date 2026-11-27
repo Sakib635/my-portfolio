@@ -27,7 +27,6 @@ permalink: /projects/smtpip/
   .smt-h { font-size: 1.5rem; margin: 0 0 0.35rem; }
   .smt-sub { margin: 0 0 1.25rem; opacity: .75; }
   .smt-hero { position: static; padding: 2rem; border: 1px solid var(--smt-border); border-radius: 18px; background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(139,92,246,.08)); }
-  .smt-eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--smt-accent); }
   .smt-title { font-size: 2.6rem; line-height: 1.1; margin: 0.35rem 0 0.4rem; }
   .smt-tagline { font-size: 1.2rem; font-weight: 600; margin: 0 0 1rem; }
   .smt-lead { font-size: 1.05rem; line-height: 1.65; margin: 0 0 1.25rem; max-width: 760px; }
@@ -75,9 +74,7 @@ permalink: /projects/smtpip/
   .smt-badge.ok { background: rgba(46,160,67,.18); color: #2a8a3e; }
   .smt-badge.unsat { background: rgba(207,34,46,.16); color: #c0262f; }
   .smt-badge.info { background: rgba(59,130,246,.16); color: #2563eb; }
-  .smt-callout { margin-top: 1.5rem; padding: 1rem 1.25rem; border-radius: 12px; border: 1px solid var(--smt-border); border-left: 5px solid #f59e0b; background: rgba(245,158,11,.08); font-size: 0.95rem; line-height: 1.6; }
-  .smt-callout p { margin: 0 0 0.4rem; }
-  .smt-callout p:last-child { margin: 0; }
+  .smt-note { font-size: 0.9rem; opacity: .75; margin: 1.25rem 0 0; }
   .smt-overlay { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; padding: 1rem; background: rgba(0,0,0,.6); }
   .smt-overlay.open { display: flex; }
   .smt-modal { position: relative; width: 100%; max-width: 740px; max-height: 90vh; overflow-y: auto; padding: 1.75rem; border-radius: 16px; background: #fff; color: #1f2328; box-shadow: 0 24px 60px rgba(0,0,0,.45); animation: smt-pop .18s ease; }
@@ -121,10 +118,9 @@ permalink: /projects/smtpip/
 
 <div class="smt-page">
   <div class="smt-hero">
-    <span class="smt-eyebrow">Research Project &middot; SCAM 2026</span>
     <h2 class="smt-title">SMTpip</h2>
     <p class="smt-tagline">Interpreter-Aware SMT-Based Dependency Conflict Resolution for Python</p>
-    <p class="smt-lead">Prototype tool that translates Python dependency requirements into SMT constraints for optimal, conflict-free resolution &mdash; outperforming greedy pip in complex scenarios. Directly tied to thesis on better dependency ecosystems.</p>
+    <p class="smt-lead">SMTpip translates Python dependency requirements into SMT constraints for optimal, conflict-free resolution &mdash; outperforming greedy pip in complex scenarios. Directly tied to thesis on better dependency ecosystems.</p>
     <div class="smt-tags">
       <span class="smt-tag">Python</span>
       <span class="smt-tag">SMT solvers (Z3)</span>
@@ -147,22 +143,6 @@ permalink: /projects/smtpip/
       </a>
     </div>
   </div>
-  <section>
-    <h2 class="smt-h">Publication</h2>
-    <div class="smt-paper">
-      <div>
-        <span class="smt-paper-label">Main Paper</span>
-        <span class="smt-paper-title">SMTpip: Interpreter-Aware SMT-Based Dependency Conflict Resolution for Restoring Python Source-Code Executability</span>
-        <p class="smt-paper-venue">Presented at The 26th IEEE International Conference on Source Code Analysis and Manipulation (SCAM 2026)</p>
-        <div class="smt-actions">
-          <a class="smt-btn paper" href="https://ieeexplore.ieee.org/abstract/document/11768862" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>
-            IEEE Xplore
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
   <section>
     <h2 class="smt-h">Demo</h2>
     <p class="smt-sub">Press play to watch SMTpip in action, or open the video on YouTube.</p>
@@ -203,9 +183,23 @@ permalink: /projects/smtpip/
     <p class="smt-sub">SMTpip is illustrated on four projects. Hover over a scenario for a preview; click it for the requirements, the reason they conflict (or not), what pip does where reported, and what SMTpip returns.</p>
     <button type="button" class="smt-legend-btn" id="smt-legend-btn">How to read the requirements</button>
     <div class="smt-grid" id="smt-grid"></div>
-    <div class="smt-callout">
-      <p><strong>Resolution success is not execution success.</strong> Resolution success denotes that SMTpip produced a satisfiable installation plan; it does not imply that the project's source code executes successfully once installed.</p>
-      <p>The explanations of the conflicts are derived from the dependency metadata of the packages; SMTpip itself reports the result.</p>
+    <p class="smt-note">The explanations of the conflicts are derived from the dependency metadata of the packages; SMTpip itself reports the result.</p>
+  </section>
+  <section>
+    <h2 class="smt-h">Learn More</h2>
+    <p class="smt-sub">For more details, read our paper, which was published at SCAM 2026.</p>
+    <div class="smt-paper">
+      <div>
+        <span class="smt-paper-label">Published Paper</span>
+        <span class="smt-paper-title">SMTpip: Interpreter-Aware SMT-Based Dependency Conflict Resolution for Restoring Python Source-Code Executability</span>
+        <p class="smt-paper-venue">Published at The 26th IEEE International Conference on Source Code Analysis and Manipulation (SCAM 2026)</p>
+        <div class="smt-actions">
+          <a class="smt-btn paper" href="https://ieeexplore.ieee.org/abstract/document/11768862" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>
+            Read the Paper on IEEE Xplore
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 </div>
