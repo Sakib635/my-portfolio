@@ -78,7 +78,6 @@ permalink: /projects/smtpip/
 
 <div class="project-card">
   <h2>SMTpip: Solver-Based Dependency Management for Python</h2>
-  <p><strong>University of Windsor (M.Sc. Thesis component) | 2024 – 2025</strong></p>
 
   <div class="smt-paper">
     <span class="smt-paper-label">Main Paper</span>
