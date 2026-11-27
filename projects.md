@@ -28,7 +28,6 @@ permalink: /projects/
 
 <div class="project-card" style="margin-bottom: 4rem;">
   <h2>SMTpip: Solver-Based Dependency Management for Python</h2>
-  <p><strong>University of Windsor (M.Sc. Thesis component) | 2024 – 2025</strong></p>
   <p>
     Prototype tool that translates Python dependency requirements into SMT constraints for optimal, conflict-free resolution — outperforming greedy pip in complex scenarios. Directly tied to thesis on better dependency ecosystems.
   </p>
