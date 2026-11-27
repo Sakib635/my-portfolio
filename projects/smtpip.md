@@ -26,7 +26,7 @@ permalink: /projects/smtpip/
   .smt-page section { margin-top: 3rem; }
   .smt-h { font-size: 1.5rem; margin: 0 0 0.35rem; }
   .smt-sub { margin: 0 0 1.25rem; opacity: .75; }
-  .smt-hero { padding: 2rem; border: 1px solid var(--smt-border); border-radius: 18px; background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(139,92,246,.08)); }
+  .smt-hero { position: static; padding: 2rem; border: 1px solid var(--smt-border); border-radius: 18px; background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(139,92,246,.08)); }
   .smt-eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--smt-accent); }
   .smt-title { font-size: 2.6rem; line-height: 1.1; margin: 0.35rem 0 0.4rem; }
   .smt-tagline { font-size: 1.2rem; font-weight: 600; margin: 0 0 1rem; }
@@ -120,7 +120,7 @@ permalink: /projects/smtpip/
 </style>
 
 <div class="smt-page">
-  <header class="smt-hero">
+  <div class="smt-hero">
     <span class="smt-eyebrow">Research Project &middot; SCAM 2026</span>
     <h2 class="smt-title">SMTpip</h2>
     <p class="smt-tagline">Interpreter-Aware SMT-Based Dependency Conflict Resolution for Python</p>
@@ -146,7 +146,7 @@ permalink: /projects/smtpip/
         Watch the Demo
       </a>
     </div>
-  </header>
+  </div>
   <section>
     <h2 class="smt-h">Publication</h2>
     <div class="smt-paper">
