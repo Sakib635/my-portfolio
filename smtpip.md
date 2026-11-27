@@ -8,7 +8,20 @@ permalink: /projects/smtpip/
   <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">Projects</h1>
 </div>
 
-{% include project-tabs.html %}
+<style>
+  .proj-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin: 2rem 0 2.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(127,127,127,.3); }
+  .proj-tabs a { padding: 0.5rem 1.1rem; border-radius: 999px; border: 1px solid rgba(127,127,127,.35); text-decoration: none; font-weight: 600; color: inherit; transition: background .15s ease, transform .15s ease; }
+  .proj-tabs a:hover, .proj-tabs a:focus-visible { background: rgba(127,127,127,.14); transform: translateY(-1px); outline: none; }
+  .proj-tabs a.active { background: #3b82f6; border-color: #3b82f6; color: #fff; }
+  .proj-open { display: inline-block; margin-top: 0.5rem; padding: 0.45rem 1rem; border-radius: 999px; border: 1px solid rgba(127,127,127,.4); text-decoration: none; font-weight: 600; }
+  .proj-open:hover, .proj-open:focus-visible { background: rgba(127,127,127,.14); outline: none; }
+</style>
+<nav class="proj-tabs" aria-label="Project navigation">
+  <a href="{{ site.baseurl }}/projects/"{% if page.url == '/projects/' %} class="active" aria-current="page"{% endif %}>Overview</a>
+  <a href="{{ site.baseurl }}/projects/smtpip/"{% if page.url == '/projects/smtpip/' %} class="active" aria-current="page"{% endif %}>SMTpip</a>
+  <a href="{{ site.baseurl }}/projects/pyhealer/"{% if page.url == '/projects/pyhealer/' %} class="active" aria-current="page"{% endif %}>PyHealer</a>
+  <a href="{{ site.baseurl }}/projects/vta-bot/"{% if page.url == '/projects/vta-bot/' %} class="active" aria-current="page"{% endif %}>VTA Bot</a>
+</nav>
 
 <style>
   .smt-paper { margin: 1.25rem 0; padding: 1rem 1.25rem; border-left: 4px solid #3b82f6; border-radius: 8px; background: rgba(59,130,246,.08); }
@@ -35,7 +48,7 @@ permalink: /projects/smtpip/
   .smt-tile:hover .smt-teaser, .smt-tile:focus-visible .smt-teaser { max-height: 9rem; opacity: .9; margin-top: 0.6rem; }
   .smt-overlay { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; padding: 1rem; background: rgba(0,0,0,.55); }
   .smt-overlay.open { display: flex; }
-  .smt-modal { position: relative; width: 100%; max-width: 720px; max-height: 90vh; overflow-y: auto; padding: 1.75rem; border-radius: 14px; background: var(--bg, #fff); color: var(--text, #1f2328); box-shadow: 0 20px 50px rgba(0,0,0,.4); animation: smt-pop .18s ease; }
+  .smt-modal { position: relative; width: 100%; max-width: 720px; max-height: 90vh; overflow-y: auto; padding: 1.75rem; border-radius: 14px; background: #fff; color: #1f2328; box-shadow: 0 20px 50px rgba(0,0,0,.4); animation: smt-pop .18s ease; }
   @keyframes smt-pop { from { transform: scale(.96); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   .smt-close { position: absolute; top: 0.6rem; right: 0.8rem; font-size: 1.6rem; line-height: 1; background: none; border: none; cursor: pointer; color: inherit; opacity: .7; }
   .smt-close:hover, .smt-close:focus-visible { opacity: 1; }
@@ -55,6 +68,12 @@ permalink: /projects/smtpip/
   .smt-outcome.ok { background: rgba(46,160,67,.15); }
   .smt-outcome.unsat { background: rgba(207,34,46,.14); }
   .smt-note { font-size: 0.9rem; opacity: .8; margin-top: 0.5rem; }
+  html.dark .smt-modal { background: #161b22; color: #e6edf3; box-shadow: 0 20px 50px rgba(0,0,0,.7); }
+  html.dark .smt-badge.ok { color: #56d364; }
+  html.dark .smt-badge.unsat { color: #ff7b72; }
+  html.dark .smt-badge.info { color: #79c0ff; }
+  html.dark .smt-clash-x { color: #ff7b72; }
+  html.dark .smt-tile:hover, html.dark .smt-tile:focus-visible { box-shadow: 0 8px 20px rgba(0,0,0,.6); }
 </style>
 
 <div class="project-card">
