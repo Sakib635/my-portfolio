@@ -1,15 +1,14 @@
 ---
-title: "Projects"
+title: "SMTpip"
 layout: default
-permalink: /projects/
+permalink: /projects/smtpip/
 ---
 
-<div style="text-align: center; margin: 4rem 0 3rem;">
+<div style="text-align: center; margin: 4rem 0 0;">
   <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">Projects</h1>
-  <p style="font-size: 1.3rem; color: var(--text-light); max-width: 720px; margin: 0 auto;">
-    Open-source tools and research prototypes focused on AI-assisted software engineering, dependency resolution, program analysis, and automated repair.
-  </p>
 </div>
+
+{% include project-tabs.html %}
 
 <style>
   .smt-paper { margin: 1.25rem 0; padding: 1rem 1.25rem; border-left: 4px solid #3b82f6; border-radius: 8px; background: rgba(59,130,246,.08); }
@@ -58,7 +57,7 @@ permalink: /projects/
   .smt-note { font-size: 0.9rem; opacity: .8; margin-top: 0.5rem; }
 </style>
 
-<div class="project-card" style="margin-bottom: 4rem;">
+<div class="project-card">
   <h2>SMTpip: Solver-Based Dependency Management for Python</h2>
   <p><strong>University of Windsor (M.Sc. Thesis component) | 2024 – 2025</strong></p>
 
@@ -232,33 +231,3 @@ permalink: /projects/
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && overlay.classList.contains("open")) { closeModal(); } });
 })();
 </script>
-
-<div class="project-card" style="margin-bottom: 4rem;">
-  <h2>PyHealer: LLM- and RAG-enabled Agentic Repair of Python Execution Failures</h2>
-  <p><strong>University of Windsor | 2025 – 2026</strong></p>
-  <p>
-    Agentic AI system using <strong>LLMs + Retrieval-Augmented Generation (RAG)</strong> to diagnose and auto-repair Python runtime errors from missing deps, env mismatches, config issues, or code faults. Aims to reduce manual debugging in research/scientific Python workflows.
-  </p>
-  <p><strong>Tools & Techniques:</strong> Python, LLMs (e.g., GPT/Llama), LangChain/LlamaIndex-style RAG, Agent frameworks, Error parsing, Virtual env automation</p>
-  <p><strong>Link:</strong> <a href="https://zenodo.org/records/18218624" target="_blank">Zenodo Record</a> (dataset/tool artifact)</p>
-  <img src="{{ site.baseurl }}/assets/images/pyhealer.png"
-       alt="PyHealer architecture or demo screenshot"
-       class="project-img" loading="lazy">
-</div>
-
-<div class="project-card">
-  <h2>VTA Bot: Virtual Teaching Assistant</h2>
-  <p><strong>BRAC University (Undergrad Thesis) | 2021 – 2022</strong></p>
-  <p>
-    Conversational AI bot powered by NLP and deep learning to answer student queries, explain concepts, and assist with coursework — early exploration of AI in education.
-  </p>
-  <p><strong>Tools & Techniques:</strong> NLTK, PyTorch, Intent classification, Dialogue management, Data collection</p>
-  <p><strong>Link:</strong> <a href="https://github.com/Sakib635/Virtual-Teaching-Assistant-VTA-bot-" target="_blank">GitHub: VTA Bot</a></p>
-  <img src="{{ site.baseurl }}/assets/images/vta.png"
-       alt="VTA Bot conversation interface"
-       class="project-img" loading="lazy">
-</div>
-
-<p style="text-align: center; margin-top: 4rem; font-style: italic;">
-  All projects are open-source where possible. Interested in collaborating on agentic AI for SE, SMT applications, or dependency tools? Reach out via LinkedIn or GitHub!
-</p>
